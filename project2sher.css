@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+
+}
+
+#main{
+    height: 100%;
+    width:100%;
+    background-color: rgb(61, 128, 81);
+}
+#nav{
+    width: 100%;
+    height:10%;
+  display:flex;
+  align-items: center ;
+  justify-content: flex-end;
+  background-color: white;
+   gap:30px /*Because #nav is the flex container, its four direct children are the three h4 elements
+    and the icon. The gap property automatically adds space between each adjacent pair.*/;
+  padding-right: 2% /*not in the h4 as woh har h4 m3in daalega right space but humein dive ke right mein
+                    abd right most h4 ke beech chahiye*/;
+}
+#nav h4{
+     color: black;
+     /*justify-content: space-around; dont use as no effect on sopace ariound words 
+     use gap instead for gap 
+     in nav not in h4 pls headings*/
+    font-size: 98%  ;
+    font-weight:600;
+     font-family: 'Gilroy';
+   
+}
+#nav i{
+font-size: 107%;
+color: white;
+background-color: black;
+border-radius: 50%;
+padding:0.7%;/*ye control krta circle border kitna bda (dont use the background size)
+               padding - space btw the thing and boundary (here thing is kiske under likha)
+               here we wrote under the bag(icon i) so bag and border ke btw space is padding*/
+
+;
+
+
+}
+
+#center{
+    background-color:white;
+    width:100%;
+    padding: 5px 100px;
+}
+#center h1{
+    font-weight: 50;
+    font-size: 5vw; /*vw better as In CSS, a percentage (%) is relative to
+     the size of the element's parent container, 
+     while a viewport width unit (vw) is always 1% of the total browser window width.*/
+    line-height:5.5vw;
+}
+
+#underheading{
+    width: 100%;
+    display:flex;
+    background-color: white;
+    margin-top: 40px;
+    justify-content: space-between; /*ye right and p ke bich space dalta*/
+
+    
+
+}
+#underheading p{
+      font-size:1.17vw;
+    font-weight: 500;
+    line-height: 1.8vw;
+}
+
+
+#right{
+    width:20%; /*ye right div ko thoda left krta width 20deke see iamge in this folder*/
+ padding-top: 0px;
+}
+.link a{
+    color: black;
+    text-decoration: none;
+}
+
+.link{
+   
+    line-height: 3vw;
+    font-size: 1.4vw;
+    border-top: 0.12vw solid #000;
+    display: flex;
+ align-items: center;
+   justify-content: space-between;/*link ke under hai link and icon toh 
+                                    ye space btw icon and link bnata*/
+
+/*yahan margin nhi use krskte icon ke  ujder use kreneg left wala margin as left se 
+space increse hogi btw text link and icon (but margin left is wrong) see neeche i*/
+   
+}
+.link:hover a{
+    text-decoration: underline;
+}
+.link i{
+    /*cant use margin left as icon ke left pe space bta te toh if link word long 
+    toh diff length and short word ke liye length more as want icon in a line verticaaly
+    theregore use flex and space between*/
+    opacity: 0;}
+
+.link:hover i {
+    opacity: 1;
+}
+#bottom{
+   width: 100%;
+   height: 32.3%;
+    background-color: rgb(201, 168, 168);
+    background-image: url(https://marieclaire.hu/uploads/2020/04/austin-wade-ac8mfwpv-7g-unsplash.jpg);
+background-size: cover; 
+/* Without cover
+The image might leave empty space or repeat, depending on the other CSS properties.
+
+   With cover
+The image fills the whole div. 
+Some parts may be cropped if the image and div have different proportions.*/
+
+ background-position: 0% 60%;
+ /*This controls which part of the background image is displayed when
+  the image is larger than the div.
+
+There are two values:
+- 0 — horizontal position: align the image to the left.
+- 25% — vertical position: set the image's vertical alignment to 25%*/
+
+}
+
+@media (max-width:600px){
+    #nav{
+    width: 100%;
+    height:10%;
+  display:flex;
+  align-items: center ;
+  justify-content: flex-end;
+  background-color: white;
+   gap: 15px ;/*Because #nav is the flex container, its four direct children are the three h4 elements
+    and the icon. The gap property automatically adds space between each adjacent pair.*/;
+  padding-right: 2% /*not in the h4 as woh har h4 m3in daalega right space but humein dive ke right mein
+                    abd right most h4 ke beech chahiye*/;
+}
+
+#nav h4{
+     color: black;
+     /*justify-content: space-around; dont use as no effect on sopace ariound words 
+     use gap instead for gap 
+     in nav not in h4 pls headings*/
+    font-size: 60%  ;
+    font-weight:600;
+     font-family: 'Gilroy';
+   
+}
+#nav i{
+font-size: 70%;
+color: white;
+background-color: black;
+border-radius: 50%;
+padding:0.7%;/*ye control krta circle border kitna bda (dont use the background size)
+               padding - space btw the thing and boundary (here thing is kiske under likha)
+               here we wrote under the bag(icon i) so bag and border ke btw space is padding*/
+
+;
+
+
+}
+
+#center{
+    background-color:white;
+    width:100%;
+    padding: 5px 15px;
+}
+#center h1{
+   
+    font-size: 12.8vw;
+        font-weight: 500;
+        line-height: 13vw;
+}
+#underheading{
+    width: 100%;
+    display:flex;
+    background-color: white;
+    margin-top: 3vh;
+    justify-content: space-between; /*ye right and p ke bich space dalta*/
+    flex-direction: column;
+    /*horizontal - flex , vertical - grid 
+    but idhar flex ko hi vertical krdiya by 
+    flex direction vertical*/
+    
+
+}
+#underheading p{
+      font-size:2vw;
+    font-weight: 12px;
+    line-height: 3vw;
+    
+}
+
+#right{
+    width:100%; /*ye right div ko thoda left krta width 20deke see iamge in this folder*/
+ padding-top: 4vh;
+
+  
+.link a{
+    color: black;
+    text-decoration: none;
+}
+
+.link{
+   
+    line-height: 6vh;
+    font-size: 4vw;
+    border-top: 0.5vw solid #000;
+    display: flex;
+ align-items: center;
+   justify-content: space-between;/*link ke under hai link and icon toh 
+                                    ye space btw icon and link bnata*/
+
+
+/*yahan margin nhi use krskte icon ke  ujder use kreneg left wala margin as left se 
+space increse hogi btw text link and icon (but margin left is wrong) see neeche i*/
+   
+}
+.link:hover a{
+    text-decoration: underline;
+}
+.link i{
+    /*cant use margin left as icon ke left pe space bta te toh if link word long 
+    toh diff length and short word ke liye length more as want icon in a line verticaaly
+    theregore use flex and space between*/
+    opacity: 0;}
+
+.link:hover i {
+    opacity: 1;
+}
+
+}
+
+#bottom{
+   width: 100%;
+   height: 33.3%;
+    background-color: rgb(201, 168, 168);
+       background-image: url("./fashion-image.png");
+background-size: cover; 
+
+ background-position: 4% 40%;}
+
+
+}
